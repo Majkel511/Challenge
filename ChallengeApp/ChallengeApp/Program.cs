@@ -11,7 +11,7 @@ if (name == "Michal" && old == 33 && gender == "Men")
     Console.WriteLine("Michal masz wiecej lat niz 34");
     }
 
-    else if (name == "Michal" && old <= 34)
+    else if (name == "Michal" && old <= 32)
     {
     Console.WriteLine("Michal masz mniej lat niz 32");
     }
