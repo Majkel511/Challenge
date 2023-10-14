@@ -1,32 +1,20 @@
-﻿var name = "Michal";
-var gender = "Men";
+﻿var name = "Ewa";
+var gender = "Woman";
 var old = 33;
 
-if (name == "Michal" && old == 33 && gender == "Men")
+if (name == "Ewa" && gender == "Woman" && old == 33)
 {
-    Console.WriteLine("Michal, lat 33");
+    Console.WriteLine("Ewa,lat 33");
+    }
+else if (gender == "Women" && old < 30)
+{
+    Console.WriteLine("Kobieta ponizej 30lat");
 }
-else if (old >= 34 && gender == "Men")
+else if (gender == "Men" && old < 18)
 {
-    Console.WriteLine("Meżczyzna starszy od 34 lat");
-}
-else if (old <= 32 && gender == "Men")
-{
-    Console.WriteLine("Meżczyzna młodszy od 32 lat");
-}
-else if (old < 32 && gender == "Woman")
-{
-    Console.WriteLine("Kobieta młodsza od 32 lat");
-}
-else if (old == 32 && gender == "Woman")
-{
-    Console.WriteLine("Kobieta w wieku 32 lat");
-}
-else if (old > 32 && gender == "Woman")
-{
-    Console.WriteLine("Kobieta starsza od 32 lat");
+    Console.WriteLine("Nepełnoleti Mężczyzna");
 }
 else
 {
-    Console.WriteLine("Warunek niespelniony ");
+    Console.WriteLine("Niepoprawene dane");
 }
