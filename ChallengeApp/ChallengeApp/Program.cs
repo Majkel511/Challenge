@@ -39,7 +39,5 @@ foreach (Employee employee in employees)
     }
 }
 Console.WriteLine("Najlepszy pracownik pod katem punktowym to:");
-Console.WriteLine(employeeWithMaxResult.Name);
-Console.WriteLine($"{employeeWithMaxResult.Surname}: ");
-Console.WriteLine($"{employeeWithMaxResult.Score}: pts.");
+Console.WriteLine(employeeWithMaxResult.Name + " " + $"{employeeWithMaxResult.Surname}:" +  " " + $"{employeeWithMaxResult.Score} pts.");
 Console.WriteLine("Brawo byle by tak dalej.:");
