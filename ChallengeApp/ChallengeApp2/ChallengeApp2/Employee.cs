@@ -4,10 +4,14 @@
     {
         private List<int> score = new List<int>();
 
+        public Employee() : this(null, null) { }
+
+        public Employee(string name) : this(name, null) { }
+
         public Employee(string name, string surname)
         {
-            this.Name = "name";
-            this.Surname = "surname";
+            this.Name = name;
+            this.Surname = surname;
         }
 
 

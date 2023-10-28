@@ -7,7 +7,7 @@ namespace ChellengeApp2_Test
     {
 
         [Test]
-        public void WhenStudentCollectScores()
+        public void WhenEmployeeCollectScores()
         {
             var user = new Employee("Michal", "Garncarz");
             user.AddScore(5);
@@ -18,6 +18,7 @@ namespace ChellengeApp2_Test
             Assert.AreEqual(7, result);
         }
 
+        [Test]
         public void WhenStudentCollectScores2()
         {
             var user = new Employee("Michal", "Garncarz");
