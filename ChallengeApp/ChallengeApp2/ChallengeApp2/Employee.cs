@@ -1,12 +1,13 @@
-﻿namespace ChellengeApp2
+﻿using ChallengeApp2;
+
+namespace ChallengeApp2
 {
     public class Employee
     {
-        private List<int> score = new List<int>();
+        private List<float> grades = new List<float>();
 
-        public Employee() : this(null, null) { }
-
-        public Employee(string name) : this(name, null) { }
+        public string Name { get; private set; }
+        public string Surname { get; private set; }
 
         public Employee(string name, string surname)
         {
@@ -14,22 +15,33 @@
             this.Surname = surname;
         }
 
-
-        public string Name { get; private set; }
-        public string Surname { get; private set; }
-
-        public int Result
+        public void AddGrade(float grade)
         {
-            get
+            this.grades.Add(grade);
+        }
+
+        public Statistick GetStatistick()
+        {
+            var statistick = new Statistick();
+
+            statistick.Average = 0;
+            statistick.Max = float.MinValue;
+            statistick.Min = float.MaxValue;
+
+            foreach (var grade in this.grades)
             {
-                return this.score.Sum();
+
+                statistick.Max = Math.Max(statistick.Max, grade);
+                statistick.Min = Math.Min(statistick.Min, grade);
+                statistick.Average += grade;
+
             }
+
+            statistick.Average /= this.grades.Count;
+
+            return statistick;
+
         }
 
-        public void AddScore(int number)
-        {
-            this.score.Add(number);
-        }
     }
-
 }
